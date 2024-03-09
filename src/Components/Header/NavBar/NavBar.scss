@@ -1,0 +1,15 @@
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(24px);
+  max-height: 400px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
