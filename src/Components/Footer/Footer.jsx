@@ -13,10 +13,10 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
-      {"Copyright © "}
-      {new Date().getFullYear()}
-      <Link color="inherit">Newstreet. All Rights Reserved.</Link> {"."}
+    <Typography variant="body2" className="TextFont">
+      <Link style={{ color: "red" }}>
+        Copyright © {new Date().getFullYear()} Newstreet. All Rights Reserved.
+      </Link>
     </Typography>
   );
 }
@@ -35,12 +35,12 @@ const quickLinks2 = [
 ];
 
 const defaultTheme = createTheme();
-const handleArrowClick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 
 export default function Footer() {
   const navigate = useNavigate();
+  const handleArrowClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -50,6 +50,7 @@ export default function Footer() {
         justifyContent="flex-end"
         alignItems="center"
         minHeight="100vh"
+        className="footer" // Apply the global style class
       >
         <CssBaseline />
         <Grid
@@ -58,24 +59,23 @@ export default function Footer() {
           py={3}
           px={2}
           rowSpacing={1}
-          columnSpacing={{ xs: 2, sm: 3, md: 6 }}
+          columnSpacing={{ xs: 2, sm: 3, md: 7 }}
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === "light"
-                ? theme.palette.grey[200]
-                : theme.palette.grey[800],
+            backgroundColor: "black",
           }}
         >
           <Grid item sx={{ justifyContent: "flex-start" }}>
             <img src={LogoImg} className="logo1" alt="logo of sitemark" />
           </Grid>
           <Grid item>
-            <Typography variant="h6">Quick Links</Typography>
+            <Typography variant="h6" className="TextOnly">
+              Quick Links
+            </Typography>
             {quickLinks.map((link) => (
               <Grid item key={link.label} sx={{ justifyContent: "center" }}>
                 <Link
                   href={link.path}
-                  color="textPrimary"
+                  className="TextFont"
                   onClick={() => navigate(link.path)}
                 >
                   {link.label}
@@ -89,7 +89,7 @@ export default function Footer() {
               <Grid item key={link.label} sx={{ justifyContent: "center" }}>
                 <Link
                   href={link.path}
-                  color="textPrimary"
+                  className="TextFont"
                   onClick={() => navigate(link.path)}
                 >
                   {link.label}
@@ -98,20 +98,40 @@ export default function Footer() {
             ))}
           </Grid>
           <Grid item>
-            India <br />
-            <Typography>+91 80 4371 1712</Typography>
-            <Typography>careers@newstreettech.com</Typography>
+            <Typography varient="h6" className="TextOnly">
+              India
+            </Typography>
+            <Typography>
+              <a className="TextFont" href="tel:+918043711712">
+                +91 80 4371 1712
+              </a>
+            </Typography>
+            <Typography>
+              <a className="TextFont" href="mailto:careers@newstreettech.com">
+                careers@newstreettech.com
+              </a>
+            </Typography>
           </Grid>
           <Grid item>
-            UAE <br />
-            <Typography>+971 55 9298 123</Typography>
-            <Typography>info@newstreettech.com</Typography>
+            <Typography varient="h6" className="TextOnly">
+              UAE
+            </Typography>
+            <Typography>
+              <a className="TextFont" href="tel:+971559298123">
+                +971 55 9298 123
+              </a>
+            </Typography>
+            <Typography>
+              <a className="TextFont" href="mailto:info@newstreettech.com">
+                info@newstreettech.com
+              </a>
+            </Typography>
           </Grid>
           <Grid item>
-            Social Media <br />
+            <Typography className="TextOnly">Social Media</Typography>
             <a href="https://www.linkedin.com/company/newstreettech">
               <LinkedInIcon />
-            </a>
+            </a>{" "}
             <a href="https://twitter.com/New_Street_Tech">
               <XIcon />
             </a>
@@ -123,13 +143,25 @@ export default function Footer() {
           alignItems="center"
           mb={2}
           p={2}
+          sx={{ backgroundColor: "black" }}
         >
           <Grid item>
             <Copyright />
           </Grid>
           <Grid item>
-            <Typography variant="body2">
-              Privacy and Policy <ArrowUpwardIcon onClick={handleArrowClick} />
+            <Typography
+              variant="body2"
+              className="TextFont"
+              style={{ color: "red" }}
+            >
+              <a
+                href="/privacypolicy"
+                className="TextOnly"
+                style={{ color: "red" }}
+              >
+                Privacy and Policy
+              </a>
+              <ArrowUpwardIcon onClick={handleArrowClick} />
             </Typography>
           </Grid>
         </Grid>

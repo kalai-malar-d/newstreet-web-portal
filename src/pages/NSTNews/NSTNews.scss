@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: flex;
+  overflow-x: hidden;
+}
+.nav {
+  margin: 20px;
+}
+.ul {
+  display: flex;
+}
+.li {
+  list-style-type: none;
+  margin-right: 30px;
+}
+.li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+}
+.li:hover a {
+  color: rgb(62, 106, 181);
+}
+.btn {
+  position: absolute;
+  padding: 6px 12px 6px 12px;
+  right: 130px;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(83, 165, 210);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #ffffff;
+  background-color: rgb(29, 110, 176);
+}
+.learn {
+  position: absolute;
+  right: 30px;
+  margin-top: 6px;
+}
+.learn a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.learn:hover a {
+  color: rgb(61, 61, 180);
+}
+.bg-image {
+  background-image: url("whale3.jpg");
+  background-color: #120f22;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.end {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(37, 37, 62);
+  top: 2200px;
+  font-size: 20px;
+  color: white;
+}
+
+.container {
+  display: none;
+  color: white;
+  position: absolute;
+  margin-left: 20px;
+  margin-right: 20px;
+  bottom: 2%;
+  align-items: center;
+  padding: 20px;
+  font-size: 15px;
+  border: 1px dashed rgb(107, 123, 148);
+  border-radius: 5px;
+}
+.container.active {
+  display: block;
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  align-items: center;
+  padding: 20px;
+  font-size: 15px;
+  border: 1px dashed rgb(107, 123, 148);
+  border-radius: 5px;
+}
+.main {
+  position: absolute;
+  left: 3%;
+  top: 30%;
+  padding: 100px;
+  color: #ffffff;
+  font-size: 30px;
+}
+.btn1 {
+  position: absolute;
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 6px 15px 6px 15px;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(83, 165, 210);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn1:hover {
+  background-color: rgb(29, 110, 176);
+}
+
+.btn2 {
+  left: 330px;
+  position: absolute;
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 6px 15px 6px 15px;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(83, 165, 210);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn2:hover {
+  background-color: rgb(29, 110, 176);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+.cont {
+  margin-top: 800px;
+  display: flex;
+  width: 80vw;
+  padding: 0px 20px 30px 0px;
+}
+.what {
+  position: absolute;
+  top: 1480px;
+  color: white;
+  left: 10%;
+  width: 80%;
+  background-color: rgb(37, 37, 62);
+  padding: 0px 40px 10px 0px;
+}
+.what h2 {
+  color: rgb(206, 193, 54);
+  margin-left: 40px;
+}
+.what p {
+  margin-left: 30px;
+}
+.adopt {
+  position: absolute;
+  top: 1780px;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+}
+.adopt h2 {
+  color: rgb(206, 193, 54);
+  margin-left: 30px;
+}
+.adopt .ul .li {
+  color: black;
+  padding: 5%;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(29, 110, 176);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.adopt .ul .li.li1:hover {
+  background-color: rgb(80, 132, 175);
+}
+.adopt .ul .li.li2:hover {
+  background-color: rgb(80, 132, 175);
+}
+.adopt .ul .li.li3:hover {
+  background-color: rgb(80, 132, 175);
+}
+.adopt .ul .li.li4:hover {
+  background-color: rgb(80, 132, 175);
+}
+.yel {
+  color: yellow;
+}
+.types {
+  position: absolute;
+  top: 1000px;
+  left: 100px;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+}
+.main .btn1 a {
+  text-decoration: none;
+  color: black;
+}
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  bottom: 0%;
+  transition: flex 0.7s ease-in-out;
+}
+
+.panel h4 {
+  font-size: 23px;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.left {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: middle;
+  position: relative;
+  bottom: 1px;
+}
+.panel.active {
+  flex: 4;
+}
+.end h2 {
+  color: yellow;
+}
+.panel.active h4 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .cont {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}

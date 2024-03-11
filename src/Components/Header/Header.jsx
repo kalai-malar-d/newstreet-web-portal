@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-import NavBar from './NavBar/NavBar'
+import React from "react";
+import NavBar from "./NavBar/NavBar";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div><NavBar />r</div>
-    )
-  }
-}
+const Header = () => {
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
+};
+
+export default Header;
