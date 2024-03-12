@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Button } from "@mui/material";
 import logoImage from "./assets/image.png";
 import "./NavBar.scss";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -42,44 +43,43 @@ function NavBar() {
             }}
           >
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <MenuItem onClick={() => navigate("/")} sx={{ px: "20px" }}>
-                <Typography variant="body2" className="TextFont">
+              <MenuItem onClick={() => navigate("/")} sx={{ px: "30px" }}>
+                <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
+                <Typography variant="body2" className="TextFont1">
                   Home
                 </Typography>
               </MenuItem>
               <MenuItem
                 onClick={() => navigate("/products")}
-                sx={{ p: "20px" }}
+                sx={{ p: "30px" }}
               >
-                <Typography variant="body2" className="TextFont">
+                <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
+                <Typography variant="body2" className="TextFont1">
                   Products
                 </Typography>
               </MenuItem>
-              <MenuItem
-                onClick={() => navigate("/partners")}
-                sx={{ p: "20px" }}
-              >
-                <Typography variant="body2" className="TextFont">
-                  Partners
-                </Typography>
-              </MenuItem>
-              <MenuItem onClick={() => navigate("/aboutus")} sx={{ p: "20px" }}>
-                <Typography variant="body2" className="TextFont">
+
+              <MenuItem onClick={() => navigate("/aboutus")} sx={{ p: "30px" }}>
+                <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
+                <Typography variant="body2" className="TextFont1">
                   About Us
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={() => navigate("/nstnews")} sx={{ p: "20px" }}>
-                <Typography variant="body2" className="TextFont">
+              <MenuItem onClick={() => navigate("/nstnews")} sx={{ p: "30px" }}>
+                <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
+                <Typography variant="body2" className="TextFont1">
                   NST News
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={() => navigate("/careers")} sx={{ p: "20px" }}>
-                <Typography variant="body2" className="TextFont">
+              <MenuItem onClick={() => navigate("/careers")} sx={{ p: "30px" }}>
+                <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
+                <Typography variant="body2" className="TextFont1">
                   Careers
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={() => navigate("/contact")} sx={{ p: "20px" }}>
-                <Typography variant="body2" className="TextFont">
+              <MenuItem onClick={() => navigate("/contact")} sx={{ p: "30px" }}>
+                <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
+                <Typography variant="body2" className="TextFont1">
                   Contact
                 </Typography>
               </MenuItem>

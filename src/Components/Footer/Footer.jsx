@@ -10,10 +10,11 @@ import { useNavigate } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 function Copyright() {
   return (
-    <Typography variant="body2" className="TextFont">
+    <Typography variant="body2" className="TextOnly">
       <Link style={{ color: "red" }}>
         Copyright © {new Date().getFullYear()} Newstreet. All Rights Reserved.
       </Link>
@@ -41,7 +42,10 @@ export default function Footer() {
   const handleArrowClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
+  const privacyclick = () => {
+    navigate("/privacypolicy");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <ThemeProvider theme={defaultTheme}>
       <Grid
@@ -49,8 +53,7 @@ export default function Footer() {
         direction="column"
         justifyContent="flex-end"
         alignItems="center"
-        minHeight="100vh"
-        className="footer" // Apply the global style class
+        className="footer"
       >
         <CssBaseline />
         <Grid
@@ -62,6 +65,10 @@ export default function Footer() {
           columnSpacing={{ xs: 2, sm: 3, md: 7 }}
           sx={{
             backgroundColor: "black",
+            position: "sticky",
+            bottom: 0,
+            width: "100%",
+            zIndex: 1000,
           }}
         >
           <Grid item sx={{ justifyContent: "flex-start" }}>
@@ -73,6 +80,8 @@ export default function Footer() {
             </Typography>
             {quickLinks.map((link) => (
               <Grid item key={link.label} sx={{ justifyContent: "center" }}>
+                <PlayArrowIcon viewBox="0 0 30 10" sx={{ color: "red" }} />
+
                 <Link
                   href={link.path}
                   className="TextFont"
@@ -87,6 +96,7 @@ export default function Footer() {
             <br />
             {quickLinks2.map((link) => (
               <Grid item key={link.label} sx={{ justifyContent: "center" }}>
+                <PlayArrowIcon viewBox="0 0 30 10" sx={{ color: "red" }} />
                 <Link
                   href={link.path}
                   className="TextFont"
@@ -137,6 +147,7 @@ export default function Footer() {
             </a>
           </Grid>
         </Grid>
+
         <Grid
           container
           justifyContent="space-between"
@@ -154,14 +165,20 @@ export default function Footer() {
               className="TextFont"
               style={{ color: "red" }}
             >
-              <a
-                href="/privacypolicy"
-                className="TextOnly"
-                style={{ color: "red" }}
-              >
-                Privacy and Policy
-              </a>
-              <ArrowUpwardIcon onClick={handleArrowClick} />
+              <ArrowUpwardIcon
+                onClick={handleArrowClick}
+                sx={{ justifyContent: "flex-end" }}
+              />
+
+              <Link>
+                <Typography
+                  onClick={privacyclick}
+                  className="TextOnly"
+                  style={{ color: "red" }}
+                >
+                  Privacy and Policy
+                </Typography>
+              </Link>
             </Typography>
           </Grid>
         </Grid>

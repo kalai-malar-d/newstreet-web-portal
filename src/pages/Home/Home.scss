@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+.bg {
+  background-color: black;
+}
 .TextFont {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -7,4 +10,17 @@
   &:hover {
     color: red;
   }
+}
+.image-text {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
 }

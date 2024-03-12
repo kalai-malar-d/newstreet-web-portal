@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Typography from "@mui/material/Typography";
 
 const Headlines = () => {
   const headlines = [
@@ -21,7 +22,9 @@ const Headlines = () => {
 
   return (
     <div>
-      <h4>{headlines[currentHeadlineIndex]}</h4>
+      <Typography className="TextFont">
+        {headlines[currentHeadlineIndex]}
+      </Typography>
     </div>
   );
 };

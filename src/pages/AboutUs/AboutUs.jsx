@@ -15,29 +15,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Grid from "@mui/system/Unstable_Grid/Grid";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function Apconfig() {
   const [photos, setPhotos] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/photos";
+  const fetchData = async () => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error("Oh no! Fetch failed");
+      }
+      const data = await res.json();
+
+      // Stop fetching after the 10th item
+      const slicedData = data.slice(0, 10);
+
+      setPhotos(slicedData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) {
-          throw new Error("Oh no! Fetch failed");
-        }
-        const data = await res.json();
-
-        // Stop fetching after the 10th item
-        const slicedData = data.slice(0, 10);
-
-        setPhotos(slicedData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
     fetchData();
   }, []);
 
@@ -45,10 +45,24 @@ function Apconfig() {
     <div className="App">
       <h1>Photos</h1>
       <h2>...are here</h2>
-
-      {photos.map((photo) => (
-        <FlippableCard key={photo.id} photo={photo} />
-      ))}
+      <Grid container sx={{ justifyContent: "space-around" }}>
+        {photos.map((photo) => (
+          <Grid item>
+            <FlippableCard key={photo.id} photo={photo} />
+            <br />
+            <Typography className="Profiles" color={"white"}>
+              {photo.title}
+              {" || "}
+              <a
+                href="https://www.linkedin.com/company/newstreettech"
+                className="Linkedin"
+              >
+                <LinkedInIcon viewBox="0 0 20 20" />
+              </a>
+            </Typography>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }

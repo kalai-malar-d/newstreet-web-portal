@@ -4,24 +4,30 @@ import Footer from "../../Components/Footer/Footer";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Headlines from "./components/Headlines";
-import Background from "../../Components/Background/Background";
+import Typography from "@mui/material/Typography";
 
 function Home() {
   return (
-    <>
-      <Background />
-      <Container maxWidth="md">
-        <Header />
-        <Grid container sx={{ mt: 12, justifyContent: "center" }}>
-          <Grid item>
-            <Headlines />
-          </Grid>
-          <Grid item>Learn More</Grid>
+    <div className="bg">
+      <Header />
+      <Typography className="TextFont">
+        “If you want something new, you have to stop doing something old.”{" "}
+        <br />
+        ~Peter F. Drucker
+      </Typography>
+      <Grid container sx={{ mt: 8, justifyContent: "center" }}>
+        <Typography className="TextFont">
+          “If you want something new, you have to stop doing something old.”{" "}
+          <br />
+          ~Peter F. Drucker
+        </Typography>
+        <Grid item>
+          <Headlines />
         </Grid>
-      </Container>
+      </Grid>
 
       <Footer />
-    </>
+    </div>
   );
 }
 export default Home;
