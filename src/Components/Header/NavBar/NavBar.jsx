@@ -19,24 +19,11 @@ function NavBar() {
     setOpen(newOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    const offset = 128;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: "smooth",
-      });
-      setOpen(false);
-    }
-  };
-
   return (
     <div id="nav-bar">
       <AppBar
         position="fixed"
+        style={{ backgroundColor: "black" }}
         sx={{
           boxShadow: 0,
           bgcolor: "transparent",
@@ -56,7 +43,7 @@ function NavBar() {
           >
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <MenuItem onClick={() => navigate("/")} sx={{ px: "20px" }}>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   Home
                 </Typography>
               </MenuItem>
@@ -64,7 +51,7 @@ function NavBar() {
                 onClick={() => navigate("/products")}
                 sx={{ p: "20px" }}
               >
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   Products
                 </Typography>
               </MenuItem>
@@ -72,27 +59,27 @@ function NavBar() {
                 onClick={() => navigate("/partners")}
                 sx={{ p: "20px" }}
               >
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   Partners
                 </Typography>
               </MenuItem>
               <MenuItem onClick={() => navigate("/aboutus")} sx={{ p: "20px" }}>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   About Us
                 </Typography>
               </MenuItem>
               <MenuItem onClick={() => navigate("/nstnews")} sx={{ p: "20px" }}>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   NST News
                 </Typography>
               </MenuItem>
               <MenuItem onClick={() => navigate("/careers")} sx={{ p: "20px" }}>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   Careers
                 </Typography>
               </MenuItem>
               <MenuItem onClick={() => navigate("/contact")} sx={{ p: "20px" }}>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" className="TextFont">
                   Contact
                 </Typography>
               </MenuItem>
@@ -122,21 +109,25 @@ function NavBar() {
                     alignItems: "end",
                   }}
                 />
-                <MenuItem onClick={() => scrollToSection("")}>Home</MenuItem>
-                <MenuItem onClick={() => scrollToSection("")}>
+                <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
+                <MenuItem onClick={() => navigate("/products")}>
                   Products
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("")}>
+                <MenuItem onClick={() => navigate("/partners")}>
                   Partners
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("")}>
+                <MenuItem onClick={() => navigate("/aboutus")}>
                   About Us
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("")}>
+                <MenuItem onClick={() => navigate("/nstnews")}>
                   NST News
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("")}>Careers</MenuItem>
-                <MenuItem onClick={() => scrollToSection("")}>Contact</MenuItem>
+                <MenuItem onClick={() => navigate("/careers")}>
+                  Careers
+                </MenuItem>
+                <MenuItem onClick={() => navigate("/contact")}>
+                  Contact
+                </MenuItem>
               </Box>
             </Drawer>
           </Box>

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.bg {
+  background-color: black;
+}
+.about-us-container {
+  position: relative;
+  background-color: #000; /* Set the desired background color */
+  color: #fff;
+  justify-content: center;
+  align-items: center; /* Set the text color */
+
+  .gpimg {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-text {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    margin: auto;
+    max-width: 100%;
+  }
+}
+.TextOnly {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  @media (max-width: 600px) {
+    font-size: 16px; // Adjust the font size for small screens
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: 20px; // Adjust the font size for medium screens
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: 24px; // Adjust the font size for large screens
+  }
+
+  @media (min-width: 1281px) {
+    font-size: 28px; // Adjust the font size for extra-large screens
+  }
+}
