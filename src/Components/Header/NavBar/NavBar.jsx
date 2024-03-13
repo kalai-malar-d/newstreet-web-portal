@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <div id="nav-bar">
       <AppBar
-        position="fixed"
+        position="sticky"
         style={{ backgroundColor: "black" }}
         sx={{
           boxShadow: 0,

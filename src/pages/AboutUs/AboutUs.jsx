@@ -19,7 +19,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function Apconfig() {
   const [photos, setPhotos] = useState([]);
-  const url = "https://jsonplaceholder.typicode.com/photos";
+  const url = "https://nst-website-api.onrender.com/api/v1/about/";
   const fetchData = async () => {
     try {
       const res = await fetch(url);
@@ -46,12 +46,12 @@ function Apconfig() {
       <h1>Photos</h1>
       <h2>...are here</h2>
       <Grid container sx={{ justifyContent: "space-around" }}>
-        {photos.map((photo) => (
+        {photos.map((data) => (
           <Grid item>
-            <FlippableCard key={photo.id} photo={photo} />
+            <FlippableCard key={data.id} photo={data} />
             <br />
             <Typography className="Profiles" color={"white"}>
-              {photo.title}
+              {data.title}
               {" || "}
               <a
                 href="https://www.linkedin.com/company/newstreettech"

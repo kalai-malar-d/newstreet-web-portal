@@ -1,26 +1,192 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 .bg {
   background-color: black;
 }
-.TextFont {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  &:hover {
-    color: red;
+.background-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.background-image2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  @media (max-width: 600px) {
+    top: 15%;
+    font-size: xx-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 20%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 25%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 25%;
   }
 }
+.TextFont-Home {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  @media (max-width: 600px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: medium;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: large;
+  }
+}
+
 .image-text {
   position: absolute;
-  top: 90%;
   left: 0;
-  right: 0;
-  transform: translate(0, -50%);
+  right: 50%;
+  transform: translate(50, -50%);
   color: white;
   text-align: center;
   z-index: 2;
   margin: auto;
   backdrop-filter: blur(5px);
   max-width: 100%;
+
+  @media (max-width: 600px) {
+    top: 15%;
+    font-size: xx-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 30%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 40%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 40%;
+  }
+}
+
+.image-text2 {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
+
+  @media (max-width: 600px) {
+    top: 27%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 43%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 50%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 60%;
+  }
+}
+.image-text3 {
+  position: absolute;
+  left: 0;
+  right: 0%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
+
+  @media (max-width: 600px) {
+    top: 10%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 10%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 20%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 25%;
+  }
+}
+
+.button-need {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+
+  @media (max-width: 600px) {
+    top: 35%;
+    max-width: 30%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 55%;
+    max-width: 70%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 70%;
+    max-width: 100%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 70%;
+    max-width: 100%;
+  }
+}
+.button-font-home {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  @media (max-width: 600px) {
+    font-size: xx-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: small;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: medium;
+  }
 }
