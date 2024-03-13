@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(24px);
+  max-height: 400px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+.TextFont {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  font-style: normal;
+  &:hover {
+    color: red;
+  }
+}
