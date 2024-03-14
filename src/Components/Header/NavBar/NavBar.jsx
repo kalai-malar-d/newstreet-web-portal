@@ -43,7 +43,11 @@ function NavBar() {
             }}
           >
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <MenuItem onClick={() => navigate("/")} sx={{ px: "30px" }}>
+              <MenuItem
+                onClick={() => navigate("/")}
+                className={window.location.pathname === "/" ? "active" : ""}
+                sx={{ px: "30px" }}
+              >
                 <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
                 <Typography variant="body2" className="TextFont1">
                   Home
@@ -52,6 +56,9 @@ function NavBar() {
               <MenuItem
                 onClick={() => navigate("/products")}
                 sx={{ p: "30px" }}
+                className={
+                  window.location.pathname === "/products" ? "active" : ""
+                }
               >
                 <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
                 <Typography variant="body2" className="TextFont1">
@@ -59,25 +66,49 @@ function NavBar() {
                 </Typography>
               </MenuItem>
 
-              <MenuItem onClick={() => navigate("/aboutus")} sx={{ p: "30px" }}>
+              <MenuItem
+                onClick={() => navigate("/aboutus")}
+                className={
+                  window.location.pathname === "/aboutus" ? "active" : ""
+                }
+                sx={{ p: "30px" }}
+              >
                 <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
                 <Typography variant="body2" className="TextFont1">
                   About Us
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={() => navigate("/nstnews")} sx={{ p: "30px" }}>
+              <MenuItem
+                onClick={() => navigate("/nstnews")}
+                className={
+                  window.location.pathname === "/nstnews" ? "active" : ""
+                }
+                sx={{ p: "30px" }}
+              >
                 <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
                 <Typography variant="body2" className="TextFont1">
                   NST News
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={() => navigate("/careers")} sx={{ p: "30px" }}>
+              <MenuItem
+                onClick={() => navigate("/careers")}
+                className={
+                  window.location.pathname === "/careers" ? "active" : ""
+                }
+                sx={{ p: "30px" }}
+              >
                 <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
                 <Typography variant="body2" className="TextFont1">
                   Careers
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={() => navigate("/contact")} sx={{ p: "30px" }}>
+              <MenuItem
+                onClick={() => navigate("/contact")}
+                className={
+                  window.location.pathname === "/contact" ? "active" : ""
+                }
+                sx={{ p: "30px" }}
+              >
                 <PlayArrowIcon viewBox="0 0 30 25" sx={{ color: "red" }} />
                 <Typography variant="body2" className="TextFont1">
                   Contact

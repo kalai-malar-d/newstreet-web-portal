@@ -34,6 +34,7 @@
 .TextFont-Home {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
+  color: white;
   font-style: normal;
   @media (max-width: 600px) {
     font-size: x-small;
@@ -189,4 +190,165 @@
   @media (min-width: 1281px) {
     font-size: medium;
   }
+}
+
+.TextFont-Home2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: white;
+  font-style: normal;
+  .head {
+    font-weight: 600;
+  }
+  .text {
+    font-weight: 400;
+  }
+  @media (max-width: 600px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: medium;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: large;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logobar {
+  background: #f2f2f2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: black;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+
+  content: "";
+  z-index: 2;
+  @media (max-width: 600px) {
+    width: 25px;
+    height: 20%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    width: 35px;
+    height: 40%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    width: 250px;
+    height: 100%;
+  }
+
+  @media (min-width: 1281px) {
+    width: 250px;
+    height: 100%;
+  }
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), red);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), red);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+  max-width: 100%;
+}
+
+.logos-slide img {
+  @media (max-width: 600px) {
+    height: 10px;
+    margin: 0 8px;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    height: 40px;
+    margin: 0 33px;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    height: 40px;
+    margin: 0 33px;
+  }
+
+  @media (min-width: 1281px) {
+    height: 40px;
+    margin: 0 33px;
+  }
+}
+
+.TextFont-Title {
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  color: red;
+  font-style: normal;
+  font-weight: 700;
+  @media (max-width: 600px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: x-large;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: large;
+  }
+}
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.slider-container {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slide-content {
+  margin: 0 auto;
 }
