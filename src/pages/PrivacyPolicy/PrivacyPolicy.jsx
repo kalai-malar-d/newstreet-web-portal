@@ -10,9 +10,6 @@ function PrivacyPolicy() {
       <Header />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
       <Container>
         <Typography>
           <Typography className="TextHead">Privacy Policy:</Typography>

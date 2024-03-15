@@ -222,7 +222,7 @@ function Home() {
         className="box"
         initial={{ opacity: 0, scale: 1 }}
         animate={{
-          opacity: [0, 1, 1, 0],
+          opacity: [0.3, 1, 1, 0.3],
           scale: [1, 1],
         }}
         transition={{
@@ -239,7 +239,7 @@ function Home() {
         className="box"
         initial={{ opacity: 0, scale: 1 }}
         animate={{
-          opacity: [0, 1, 1, 0],
+          opacity: [0.3, 1, 1, 0.3],
           scale: [1, 1],
         }}
         transition={{
@@ -448,6 +448,74 @@ function Home() {
           <div className="image-text"></div>
         </Container>
       </Grid>
+      <br />
+      <br />
+      <div className="dialog-top">
+        <Grid
+          container
+          height={200}
+          direction={"flex"}
+          justifyContent={"center"}
+          alignContent={"center"}
+        >
+          <Grid
+            item
+            xs={0}
+            sm={6}
+            md={4}
+            sx={{
+              flexWrap: "wrap",
+            }}
+          >
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              5430389
+            </Typography>
+            <br />
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              ___________
+            </Typography>
+            <br />
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              Blocks
+            </Typography>
+          </Grid>
+          <Grid item xs={0} sm={6} md={4} className="grid-dialog">
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              626
+            </Typography>
+            <br />
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              ___________
+            </Typography>
+            <br />
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              Users
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xs={0}
+            sm={6}
+            md={4}
+            sx={{
+              flexWrap: "wrap",
+            }}
+          >
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              16
+            </Typography>
+            <br />
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              ___________
+            </Typography>
+            <br />
+            <Typography className="TextFont-Home" textAlign={"center"}>
+              Nodes
+            </Typography>
+          </Grid>
+        </Grid>
+      </div>
+
       <Footer />
     </div>
   );

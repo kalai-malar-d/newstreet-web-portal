@@ -5,35 +5,31 @@ import "./NSTNews.scss";
 import { Typography, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import Container from "@mui/material/Container";
+import bg from "./Assets/V1-01092021-honeycomb-futuristic-desktop-HD.png";
 
-function Apconfig() {
+function Apconfig({ photos, visibleNewsCount, handleViewMore }) {
+  return (
+    <div className="App">
+      <Grid container sx={{ justifyContent: "space-around" }}>
+        {photos.slice(0, visibleNewsCount).map((data, index) => (
+          <div key={index} className="tile">
+            <img src={data.imageUrl} alt="Tile Image"></img>
+            <div className="text">
+              <h1>{data.title}</h1>
+              <p className="animate-text">{data.description}</p>
+            </div>
+          </div>
+        ))}
+      </Grid>
+    </div>
+  );
+}
+
+function NstNews() {
   const [photos, setPhotos] = useState([]);
-  const [visibleNewsCount, setVisibleNewsCount] = useState(2);
+  const [visibleNewsCount, setVisibleNewsCount] = useState(1);
   const url = "https://nst-website-api.onrender.com/api/v1/news/";
-
-  const AnimatedButton = () => {
-    const navigate = useNavigate();
-
-    return (
-      <motion.button
-        className="button-need"
-        whileTap={{ scale: 0.9 }}
-        whileHover={{ scale: [null, 1.2, 1.1] }}
-        style={{
-          backgroundColor: "red",
-          height: "50px",
-          width: "300px",
-          color: "white",
-          padding: "10px 20px",
-          borderRadius: "200px",
-          cursor: "pointer",
-        }}
-        onClick={handleViewMore}
-      >
-        <Typography className="button-font-nstnews">View More</Typography>
-      </motion.button>
-    );
-  };
 
   const fetchData = async () => {
     try {
@@ -54,60 +50,85 @@ function Apconfig() {
   }, []);
 
   const handleViewMore = () => {
-    setVisibleNewsCount((prevCount) => prevCount + 10);
+    setVisibleNewsCount((prevCount) => prevCount + 1);
+  };
+
+  const AnimatedButton = () => {
+    return (
+      <motion.button
+        className="button-neednstnews"
+        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: [null, 1.2, 1.1] }}
+        style={{
+          backgroundColor: "red",
+          height: "10",
+          width: "300px",
+          color: "white",
+          padding: "10px 20px",
+          borderRadius: "200px",
+          cursor: "pointer",
+          margin: "0 auto",
+          display: "block",
+        }}
+        onClick={handleViewMore}
+      >
+        <Typography className="button-font-nstnews">View More</Typography>
+      </motion.button>
+    );
   };
 
   return (
-    <div className="App">
-      <Grid container sx={{ justifyContent: "space-around" }}>
-        {photos.slice(0, visibleNewsCount).map((data, index) => (
-          <div key={index} className="tile">
-            <img src={data.imageUrl} alt="Tile Image"></img>
-            <div className="text">
-              <h1>{data.title}</h1>
-              <p className="animate-text">{data.description}</p>
-              <div className="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Grid>
-      {photos.length > visibleNewsCount && (
-        <AnimatedButton onClick={handleViewMore} />
-      )}
-    </div>
-  );
-}
-
-function NstNews() {
-  const text =
-    "There are no secrets to success. It is the result of preparation, hard work and learning from failure.".split(
-      " "
-    );
-  return (
     <div style={{ backgroundColor: "black" }}>
       <Header />
-      <div className="TextFont-news">
-        {text.map((el, i) => (
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.25,
-              delay: i / 10,
-            }}
-            key={i}
-          >
-            {el}{" "}
-          </motion.span>
-        ))}
+      <img src={bg} className="background-image"></img>
+      <div className="image-text-news">
+        <Container className="TextFont-news" maxWidth="sm">
+          {"There are no secrets to success. It is the result of preparation, hard work and learning from failure."
+            .split(" ")
+            .map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.25,
+                  delay: i / 10,
+                }}
+                key={i}
+              >
+                {el}{" "}
+              </motion.span>
+            ))}
+        </Container>
+        <br />
+        <br />
+        <Container className="TextFont-news" maxWidth="sm">
+          {"Here are the result of that hardwork and failures making achievements Here NST proudly presents"
+            .split(" ")
+            .map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.25,
+                  delay: i / 10 + 2,
+                }}
+                key={i}
+              >
+                {el}{" "}
+              </motion.span>
+            ))}
+        </Container>
+        <br />
+        <br />
+        <Apconfig
+          photos={photos}
+          visibleNewsCount={visibleNewsCount}
+          handleViewMore={handleViewMore}
+        />
+        <br />
+        <br />
+        {photos.length > visibleNewsCount && <AnimatedButton />}
       </div>
-      <Apconfig />
-      <br />
-      <br />
       <Footer />
     </div>
   );

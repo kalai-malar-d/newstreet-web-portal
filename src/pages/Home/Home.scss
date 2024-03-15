@@ -352,3 +352,16 @@
 .slide-content {
   margin: 0 auto;
 }
+
+.grid-dialog {
+  flex-wrap: "wrap";
+}
+
+.dialog-top {
+  top: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), red);
+}
+.dialog-bottom {
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), red);
+}
