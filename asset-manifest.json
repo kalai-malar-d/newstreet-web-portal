@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/newstreet-web-portal/static/css/main.d82e1a8a.css",
+    "main.js": "/newstreet-web-portal/static/js/main.02597aa5.js",
+    "static/js/453.4856a02d.chunk.js": "/newstreet-web-portal/static/js/453.4856a02d.chunk.js",
+    "static/media/image (3).png": "/newstreet-web-portal/static/media/image (3).6eb03647bf35e8e652b4.png",
+    "static/media/NST-Centre-of-Excellence.png": "/newstreet-web-portal/static/media/NST-Centre-of-Excellence.f0343796411c36faeea5.png",
+    "static/media/20215.jpg": "/newstreet-web-portal/static/media/20215.5ff29b34a9810cc65c58.jpg",
+    "static/media/1710345925180.png": "/newstreet-web-portal/static/media/1710345925180.ea4118603b596f122f8d.png",
+    "static/media/image3.jpg": "/newstreet-web-portal/static/media/image3.6c32c410426a90b2c23d.jpg",
+    "static/media/5856.jpg": "/newstreet-web-portal/static/media/5856.8c6cc66d5821565caf21.jpg",
+    "static/media/1710246946087.png": "/newstreet-web-portal/static/media/1710246946087.70fa2c4d2dfc6459b8ae.png",
+    "static/media/V1-01092021-honeycomb-futuristic-desktop-HD.png": "/newstreet-web-portal/static/media/V1-01092021-honeycomb-futuristic-desktop-HD.620aeda67a84dd93b8ee.png",
+    "static/media/2776789.jpg": "/newstreet-web-portal/static/media/2776789.21503c3a510bf8264973.jpg",
+    "static/media/Untitled-design41.jpg": "/newstreet-web-portal/static/media/Untitled-design41.53e4c066a2dc9975d84a.jpg",
+    "static/media/enterance.jpg": "/newstreet-web-portal/static/media/enterance.68a2510f52553117484c.jpg",
+    "static/media/white-background.png": "/newstreet-web-portal/static/media/white-background.43400acabc63b8510b7b.png",
+    "static/media/1710390780892.png": "/newstreet-web-portal/static/media/1710390780892.4e7bea2e2e92abb30e00.png",
+    "static/media/1710304225661.png": "/newstreet-web-portal/static/media/1710304225661.07f23d54c0809e65bdbb.png",
+    "static/media/image.jpg": "/newstreet-web-portal/static/media/image.38ca8db99ead3589f979.jpg",
+    "static/media/1710390832621.png": "/newstreet-web-portal/static/media/1710390832621.ec8d5683f83e63849064.png",
+    "static/media/Screenshot 2024-03-14 223558.png": "/newstreet-web-portal/static/media/Screenshot 2024-03-14 223558.e3494823daac916e2dcb.png",
+    "static/media/bima.png": "/newstreet-web-portal/static/media/bima.38547757972af95fb7e6.png",
+    "static/media/1710391067085.png": "/newstreet-web-portal/static/media/1710391067085.048e87d80a851679ceb6.png",
+    "static/media/1710391092960.png": "/newstreet-web-portal/static/media/1710391092960.0677e934268e95d0d34c.png",
+    "static/media/1710390989298.png": "/newstreet-web-portal/static/media/1710390989298.3ef927b93a5d14e89626.png",
+    "static/media/krypc-300x108.png": "/newstreet-web-portal/static/media/krypc-300x108.e473e4c5eba3b3d77423.png",
+    "static/media/slick.svg": "/newstreet-web-portal/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/newstreet-web-portal/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/newstreet-web-portal/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/newstreet-web-portal/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/newstreet-web-portal/index.html",
+    "main.d82e1a8a.css.map": "/newstreet-web-portal/static/css/main.d82e1a8a.css.map",
+    "main.02597aa5.js.map": "/newstreet-web-portal/static/js/main.02597aa5.js.map",
+    "453.4856a02d.chunk.js.map": "/newstreet-web-portal/static/js/453.4856a02d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d82e1a8a.css",
+    "static/js/main.02597aa5.js"
+  ]
+}
