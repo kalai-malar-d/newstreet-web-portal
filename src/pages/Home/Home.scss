@@ -1,10 +1,367 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-.TextFont {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  &:hover {
-    color: red;
+.bg {
+  background-color: black;
+}
+.background-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.background-image2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  @media (max-width: 600px) {
+    top: 15%;
+    font-size: xx-small;
   }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 20%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 25%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 25%;
+  }
+}
+.TextFont-Home {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-style: normal;
+  @media (max-width: 600px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: medium;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: large;
+  }
+}
+
+.image-text {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
+
+  @media (max-width: 600px) {
+    top: 15%;
+    font-size: xx-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 30%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 40%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 40%;
+  }
+}
+
+.image-text2 {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
+
+  @media (max-width: 600px) {
+    top: 27%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 43%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 50%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 60%;
+  }
+}
+.image-text3 {
+  position: absolute;
+  left: 0;
+  right: 0%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  max-width: 100%;
+
+  @media (max-width: 600px) {
+    top: 10%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 10%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 20%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 25%;
+  }
+}
+
+.button-need {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  transform: translate(50, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  margin: auto;
+  backdrop-filter: blur(5px);
+
+  @media (max-width: 600px) {
+    top: 35%;
+    max-width: 30%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    top: 55%;
+    max-width: 70%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    top: 70%;
+    max-width: 100%;
+  }
+
+  @media (min-width: 1281px) {
+    top: 70%;
+    max-width: 100%;
+  }
+}
+.button-font-home {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  @media (max-width: 600px) {
+    font-size: xx-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: small;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: medium;
+  }
+}
+
+.TextFont-Home2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: white;
+  font-style: normal;
+  .head {
+    font-weight: 600;
+  }
+  .text {
+    font-weight: 400;
+  }
+  @media (max-width: 600px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: medium;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: large;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logobar {
+  background: #f2f2f2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: black;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+
+  content: "";
+  z-index: 2;
+  @media (max-width: 600px) {
+    width: 25px;
+    height: 20%;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    width: 35px;
+    height: 40%;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    width: 250px;
+    height: 100%;
+  }
+
+  @media (min-width: 1281px) {
+    width: 250px;
+    height: 100%;
+  }
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), red);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), red);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+  max-width: 100%;
+}
+
+.logos-slide img {
+  @media (max-width: 600px) {
+    height: 10px;
+    margin: 0 8px;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    height: 40px;
+    margin: 0 33px;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    height: 40px;
+    margin: 0 33px;
+  }
+
+  @media (min-width: 1281px) {
+    height: 40px;
+    margin: 0 33px;
+  }
+}
+
+.TextFont-Title {
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  color: red;
+  font-style: normal;
+  font-weight: 700;
+  @media (max-width: 600px) {
+    font-size: x-small;
+  }
+
+  @media (min-width: 601px) and (max-width: 960px) {
+    font-size: small;
+  }
+
+  @media (min-width: 961px) and (max-width: 1280px) {
+    font-size: x-large;
+  }
+
+  @media (min-width: 1281px) {
+    font-size: large;
+  }
+}
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.slider-container {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slide-content {
+  margin: 0 auto;
+}
+
+.grid-dialog {
+  flex-wrap: "wrap";
+}
+
+.dialog-top {
+  top: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), red);
+}
+.dialog-bottom {
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), red);
 }

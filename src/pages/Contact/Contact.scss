@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.bg {
+  background-color: black;
+}
+
+.contact-container {
+  position: relative;
+}
+
+.bg-img {
+  width: 100%;
+}
+
+.icon-location {
+  color: red;
+  font-size: 50px;
+}
+
+.icon-circle {
+  width: 75px; /* Adjust size as needed */
+  height: 75px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: white; /* Change color as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.TextFont-Contact {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: medium;
+  color: white;
+  font-weight: 700;
+}
+.text-align-location {
+  text-align: center;
+}
+.icon-phone {
+  color: red;
+  font-size: 50px;
+}
+
+.text-align-phone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
